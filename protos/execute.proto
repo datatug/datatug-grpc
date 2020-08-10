@@ -1,0 +1,19 @@
+// Protos/execute.proto
+
+syntax = "proto3";
+
+option csharp_namespace = "DataTugService";
+
+package DataTug;
+
+service Executor {
+  rpc Execute (ExecuteRequest) returns (ExecuteReply);
+}
+
+message ExecuteRequest {
+  string id = 1;
+}
+
+message ExecuteReply {
+  int32 elapsed = 1;
+}
